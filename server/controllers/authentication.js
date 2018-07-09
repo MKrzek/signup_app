@@ -14,10 +14,11 @@ exports.signup = function(req, res, next) {
   console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
+  console.log("backend password and email", email, password);
   if (!email || !password) {
     return res
       .status(422)
-      .send({ error: "You must provide email and password" });
+      .send({ error: "You have to provide email and password" });
   }
   //   res.send({ success: "true" });
 
